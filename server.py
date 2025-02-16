@@ -158,7 +158,7 @@ def search_zilean(parsed_info: Dict[str, Any]) -> Optional[str]:
         results = response.json()
         if not results:
             logger.warning("No results found, using fallback infohash")
-            return "magnet:?xt=urn:btih:91426fbc17ad836b5a3525aeccbd3360097aeb24"
+            return "magnet:?xt=urn:btih:41e6cd50ccec55cd5704c5e3d176e7b59317a3fb"
             
         file_name_normalized = normalize_title(parsed_info["title"])
         best_match = None
@@ -188,7 +188,7 @@ def search_zilean(parsed_info: Dict[str, Any]) -> Optional[str]:
             return best_match[0]
         else:
             logger.warning("No good matches found, using fallback infohash")
-            return "magnet:?xt=urn:btih:91426fbc17ad836b5a3525aeccbd3360097aeb24"
+            return "magnet:?xt=urn:btih:41e6cd50ccec55cd5704c5e3d176e7b59317a3fb"
             
     except requests.RequestException as e:
         logger.error(f"Zilean search error: {str(e)}")
