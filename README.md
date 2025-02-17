@@ -1,6 +1,6 @@
 # Fake Torrent Server
 
-A FastAPI server that generates fake .torrent files based on media information from Radarr/Sonarr and Zilean for use with DebriDav's Easynews Implementation
+A FastAPI server that generates fake .torrent files based on media information from Radarr/Sonarr and Zilean for use with DebriDav's Easynews Implementation.
 
 ## Features
 
@@ -45,11 +45,18 @@ LOG_LEVEL=INFO
 ```
 
 ## Usage
-
 1. Run the server:
+
+### python
 
 ```bash
 python server.py
+```
+
+### docker
+
+```bash
+docker compose up -d
 ```
 2. The server will listen on `http://0.0.0.0:8000`
 
