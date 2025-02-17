@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  faketorrent:
+    restart: unless-stopped
+    container_name: faketorrent
+    build: .
+    hostname: faketorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./logs:/app/logs
+    ports:
+      - 8000:8000
