@@ -78,7 +78,7 @@ async def get_file(file_name: str, file_type: str):
 def generate_torrent(torrent_name: str):
     log_generate(torrent_name)
     
-    infohash = "41e6cd50ccec55cd5704c5e3d176e7b59317a3fb"
+    infohash = settings.INFOHASH
     piece_length = 262144  # 256 KB per piece
     fake_file_size = 1073741824  # 1 GB
     num_pieces = (fake_file_size + piece_length - 1) // piece_length
